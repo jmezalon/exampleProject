@@ -8,7 +8,7 @@ router.get("/", (req, res) => {
 
 router.get("/:id", (req, res) => {
   let id = req.params.id;
-  const student = studentData.students.filter((s) => s.id === id);
+  const student = studentData.students.find((s) => s.id === id);
 
   res.json(student);
 });
