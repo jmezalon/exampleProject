@@ -10,8 +10,13 @@ app.get("/", (req, res) => {
   res.send("Welcome to example project!");
 });
 
-app.listen(3003, () => {
-  console.log("running in port localhost:3003");
+// CONFIGURATION
+require("dotenv").config();
+const PORT = process.env.PORT;
+
+// LISTEN
+app.listen(PORT, () => {
+  console.log(`🪨 Listening on port ${PORT} 💎 `);
 });
 
 module.exports = app;
